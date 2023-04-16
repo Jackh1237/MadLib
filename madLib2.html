@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <script>
+            let adj1 = "good"
+            let adj2 = "big"
+            let adj3 = "full"
+            let adj4 = "closed"
+            let adj5 = "happily"
+            let adj6 = "great"
+            let arrAdj = []
+            while(true)
+            {
+                let input = prompt("Enter an adjective: (Type quit when done)")
+                input = input.toLowerCase()
+                if (input == "quit")
+                    break
+                arrAdj.push(input)
+            }
+            console.log(arrAdj)
+            //let arrAdj = [adj1,adj2,adj3,adj4,adj5,adj6]
+            let startingAdj = arrAdj[Math.floor(Math.random() * arrAdj.length)]
+            //Math.floor(Math.random() * arrAdj.length)
+            //returns a random index to the array of adjs we made
+
+            let verb1 = "walk"
+            let verb2 = "ran"
+            let verb3 = "swam"
+            let arrVerb = []
+            //[verb1,verb2,verb3]
+            while(true)
+            {
+                let input = prompt("Enter a verb: (Type quit when done)")
+                input = input.toLowerCase()
+                if (input == "quit")
+                    break
+                arrVerb.push(input)
+            }
+            let noun1 = "work"
+            let noun2 = "store"
+            let noun3 = "pool"
+            let arrNoun = []
+            //[noun1,noun2,noun3]
+            while(true)
+            {
+                let input = prompt("Enter a noun: (Type quit when done)")
+                input = input.toLowerCase()
+                if (input == "quit")
+                    break
+                arrNoun.push(input)
+            }
+
+            let name1 = prompt("Enter a name: ")
+
+
+            let madlib = `Today I woke up feeling ${arrAdj[Math.floor(Math.random() * arrAdj.length)]} and ate a ${arrAdj[Math.floor(Math.random() * arrAdj.length)]} breakfast. I felt ${arrAdj[Math.floor(Math.random() * arrAdj.length)]} after breakfast and decided to ${arrVerb[Math.floor(Math.random() * arrVerb.length)]} my way to the ${arrNoun[Math.floor(Math.random() * arrNoun.length)]}. The ${arrNoun[Math.floor(Math.random() * arrNoun.length)]} was ${arrAdj[Math.floor(Math.random() * arrAdj.length)]} and so ${name1} and I went to ${noun2} instead. ${startingAdj.charAt(0).toUpperCase() + startingAdj.slice(1)} we ${arrVerb[Math.floor(Math.random() * arrVerb.length)]} to the ${arrNoun[Math.floor(Math.random() * arrNoun.length)]} and ${arrVerb[Math.floor(Math.random() * arrVerb.length)]} with everyone. All and all ${name1.charAt(0).toUpperCase() + name1.slice(1)} and I had a ${arrVerb[Math.floor(Math.random() * arrVerb.length)]} day!`
+
+            console.log(madlib)
+
+            /*
+            Today I woke up feeling {adj1} and ate a {adj2} breakfast. 
+            I felt {adj3} after breakfast and decided to {verb1} my way to {noun1}.
+            The {noun1} was {adj4} and so me and {name1} went to {noun2} instead.
+            {adj5} we {verb2} to the {noun3} and [verb3] with everyone. All and all {name1}
+            and I had a {adj6} day!
+            */
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
